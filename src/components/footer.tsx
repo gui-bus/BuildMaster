@@ -98,11 +98,6 @@ export default function Footer() {
             size="icon"
           />
           <SocialLink
-            href="https://twitter.com/guibus_dev"
-            icon={<FaXTwitter size={20} />}
-            size="icon"
-          />
-          <SocialLink
             href="https://github.com/gui-bus"
             icon={<FaGithub size={20} />}
             size="icon"

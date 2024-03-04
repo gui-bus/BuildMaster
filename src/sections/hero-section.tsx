@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -14,6 +15,7 @@ import {
 
 import { MdWhatsapp } from "react-icons/md";
 import { FcMenu } from "react-icons/fc";
+import { Separator } from "@/components/ui/separator";
 
 const Links = [
   {
@@ -102,10 +104,32 @@ const HeroSection = () => {
                 </SheetTrigger>
                 <SheetContent>
                   <SheetHeader>
-                    <SheetTitle>Are you absolutely sure?</SheetTitle>
-                    <SheetDescription>
-                      This action cannot be undone. This will permanently delete
-                      your account and remove your data from our servers.
+                    <SheetTitle>
+                      <Image
+                        src="/Logo.svg"
+                        alt="BuildMaster"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className="h-auto object-cover w-44 mx-auto"
+                      />
+                    </SheetTitle>
+                    <SheetDescription className="pt-5">
+                      <div className="flex flex-col items-center justify-center">
+                        {Links.map((link) => (
+                          <SheetClose key={link.text} asChild>
+                            <div className="w-full">
+                              <Link
+                                href={link.href}
+                                className="w-full text-lg font-light transition-all duration-300 hover:font-bold"
+                              >
+                                {link.text}
+                              </Link>
+                              <Separator className="my-3 w-full" />
+                            </div>
+                          </SheetClose>
+                        ))}
+                      </div>
                     </SheetDescription>
                   </SheetHeader>
                 </SheetContent>

@@ -9,17 +9,25 @@ export default function Home() {
     <main className="relative mx-auto w-full 3xl:max-w-7xl">
       <HeroSection />
 
-      <ServicesSection />
+      <div id="Services">
+        <ServicesSection />
+      </div>
 
-      <RentSection />
+      <div id="Rent">
+        <RentSection />
+      </div>
 
-      <Separator className="my-5 w-full max-w-7xl mx-auto" />
+      <Separator className="mx-auto my-5 w-full max-w-7xl" />
 
-      <ContactSection />
+      <div id="Contact">
+        <ContactSection />
+      </div>
 
-      <Separator className="my-5 w-full max-w-7xl mx-auto" />
-      
-      <FaqSection/>
+      <Separator className="mx-auto my-5 w-full max-w-7xl" />
+
+      <div id="FAQ">
+        <FaqSection />
+      </div>
     </main>
   );
 }

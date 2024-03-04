@@ -69,7 +69,7 @@ const RentSection = () => {
         className="mx-auto h-auto w-full max-w-4xl p-5 md:hidden"
       />
 
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-center gap-5">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-center gap-5 px-5 md:px-0">
         <Image
           src="/Rent01.svg"
           alt="Banner Aluguel de ferramentas"
