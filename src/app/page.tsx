@@ -6,18 +6,18 @@ import RentSection from "@/sections/rent-section";
 import ServicesSection from "@/sections/services-section";
 export default function Home() {
   return (
-    <main className="relative mx-auto w-full 3xl:max-w-[90rem]">
+    <main className="relative mx-auto w-full 3xl:max-w-7xl">
       <HeroSection />
 
       <ServicesSection />
 
       <RentSection />
 
-      <Separator className="my-5 w-full max-w-[90rem] mx-auto" />
+      <Separator className="my-5 w-full max-w-7xl mx-auto" />
 
       <ContactSection />
 
-      <Separator className="my-5 w-full max-w-[90rem] mx-auto" />
+      <Separator className="my-5 w-full max-w-7xl mx-auto" />
       
       <FaqSection/>
     </main>
