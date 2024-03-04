@@ -53,7 +53,7 @@ const ServicesSection = () => {
 
   return (
     <section className="">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-5 p-5">
+      <div className="mx-auto flex w-full max-w-[90rem] flex-col items-center justify-center gap-5 p-5">
         <div className="flex flex-col items-center justify-center">
           <span className="text-xl font-light text-primary">SERVIÇOS</span>
           <h2 className="text-center text-3xl font-bold">

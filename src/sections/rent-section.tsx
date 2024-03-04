@@ -53,7 +53,7 @@ const RentSection = () => {
   }, [api]);
 
   return (
-    <section className="mx-auto w-full max-w-7xl">
+    <section className="mx-auto w-full max-w-[90rem]">
       <Image
         src="/BrandsMD.svg"
         alt="Marcas"

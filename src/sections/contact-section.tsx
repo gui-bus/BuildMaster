@@ -3,8 +3,8 @@ import { MdWhatsapp } from "react-icons/md";
 
 const ContactSection = () => {
   return (
-    <section className="bg-[url('/Contact.svg')] bg-cover bg-center bg-no-repeat w-full h-auto py-10 md:rounded-xl max-w-7xl mx-auto my-5">
-      <div className="w-full flex flex-col md:flex-row max-w-7xl mx-auto text-white items-center justify-around px-5 md:px-0">
+    <section className="bg-[url('/Contact.svg')] bg-cover bg-center bg-no-repeat w-full h-auto py-10 md:rounded-xl max-w-[90rem] mx-auto my-5">
+      <div className="w-full flex flex-col md:flex-row max-w-[90rem] mx-auto text-white items-center justify-around px-5 md:px-0">
         <div className="flex flex-col">
           <span className="uppercase font-light">Localização e Contato</span>
           <h3 className="text-5xl font-black">BUILD MASTER</h3>
