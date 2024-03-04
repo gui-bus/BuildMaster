@@ -52,7 +52,7 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section className="mx-auto flex w-full max-w-[90rem] flex-col items-center justify-center p-5">
+    <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center p-5">
       <h3 className="text-center text-3xl font-bold">
         PERGUNTAS FREQUENTES (FAQ)
       </h3>

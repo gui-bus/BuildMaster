@@ -10,15 +10,13 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { GrCatalog } from "react-icons/gr";
 
 const Texts = [
   {
     spanTxt: "Catálogo Completo",
     text: "Explore nosso extenso catálogo de ferramentas, desde as básicas até as especializadas, garantindo que você tenha exatamente o que precisa para cada tarefa.",
-  },
-  {
-    spanTxt: "Flexibilidade de Prazo",
-    text: "Escolha o período de aluguel desejado. Diárias ou contratos de longo prazo, oferecemos flexibilidade para atender às suas necessidades.",
   },
   {
     spanTxt: "Manutenção Garantida",
@@ -53,7 +51,7 @@ const RentSection = () => {
   }, [api]);
 
   return (
-    <section className="mx-auto w-full max-w-[90rem]">
+    <section className="mx-auto w-full max-w-7xl">
       <Image
         src="/BrandsMD.svg"
         alt="Marcas"
@@ -71,14 +69,14 @@ const RentSection = () => {
         className="mx-auto h-auto w-full max-w-4xl p-5 md:hidden"
       />
 
-      <div className="flex items-center justify-center gap-5 p-5">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-center gap-5">
         <Image
           src="/Rent01.svg"
           alt="Banner Aluguel de ferramentas"
           width={0}
           height={0}
           sizes="100vw"
-          className="mx-auto h-auto w-full"
+          className="h-auto w-full max-w-xl"
         />
         <Image
           src="/Rent02.svg"
@@ -86,7 +84,7 @@ const RentSection = () => {
           width={0}
           height={0}
           sizes="100vw"
-          className="mx-auto hidden h-auto w-full md:block"
+          className="hidden h-auto w-full max-w-xl lg:block"
         />
       </div>
 
@@ -99,16 +97,41 @@ const RentSection = () => {
             SUA SOLUÇÃO PRÁTICA E ECONÔMICA
           </h2>
         </div>
-        <p className="text-center font-light mt-5">
+        <p className="mt-5 text-center font-light">
           Explore a liberdade de construir no seu próprio ritmo com o serviço de
           aluguel de ferramentas. Oferecemos uma ampla variedade de ferramentas
           e equipamentos de altíssima qualidade, prontos para atender às
           demandas do seu projeto.
         </p>
 
+        <div className="my-8 hidden grid-cols-2 gap-2 lg:grid">
+          {Texts.map((serviceText) => (
+            <Card key={serviceText.spanTxt}>
+              <CardContent className="p-5">
+                <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-row md:text-start">
+                  <Image
+                    src="/Check.svg"
+                    alt="CheckMark"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="size-20"
+                  />
+                  <div>
+                    <span className="text-xl font-bold">
+                      {serviceText.spanTxt}
+                    </span>
+                    <p className="font-light">{serviceText.text}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
         <Carousel
           setApi={setApi}
-          className="pl-4"
+          className="pl-4 lg:hidden"
           opts={{
             loop: true,
             align: "start",
@@ -154,6 +177,14 @@ const RentSection = () => {
             ))}
           </CarouselContent>
         </Carousel>
+
+        <Button
+          variant={"default"}
+          className="mx-auto flex h-14 w-full items-center gap-5 uppercase"
+          size={"lg"}
+        >
+          Acessar catálogo completo <GrCatalog size={25} />
+        </Button>
       </div>
     </section>
   );
