@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { MdWhatsapp, MdDiscount } from "react-icons/md";
+import { MdDiscount } from "react-icons/md";
 
 const Texts = [
   {
